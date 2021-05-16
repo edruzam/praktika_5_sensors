@@ -9,7 +9,7 @@ export default class RoomSensors extends Component {
 
     readData() {
         this.setState({ room_number: this.props.match.params.number })
-        axios.get(`http://localhost:3000/api/room/'${this.props.match.params.number}'/sensors`)
+        axios.get(`http://localhost:3000/api/room/'${this.props.match.params.number}'/sensors-with-last-data`)
             .then(res => {
                 this.setState({ sensors: res.data.data });
             })
@@ -43,7 +43,8 @@ export default class RoomSensors extends Component {
                     <ul className="list-group">
                         {sensors.map(s => (
                             <li className="list-group-item" key={s.id}>
-                                {s.sensorname}
+                                <span className="fw-bold">{s.sensorname}</span>
+                                <p><span className="fw-bold">Date:</span> {s.date_time}; <span className="fw-bold">Value:</span> {s.data} {s.dimension}; <span className="fw-bold">Value Type:</span> {s.valuetype};</p>
                             </li>
                         ))}
                     </ul>

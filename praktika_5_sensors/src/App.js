@@ -37,7 +37,7 @@ export default class App extends Component {
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                   {rooms.map(r => (
-                    <li className="nav-item">
+                    <li className="nav-item" key={r.room}>
                       <Link className="nav-link" to={`/room/${r.room}`}>{r.room}</Link>
                     </li>
                   ))}
