@@ -30,7 +30,7 @@ export default class App extends Component {
         <div className="App">
           <header>
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-              <a className="navbar-brand">Project: </a>
+              <a className="navbar-brand">Rooms: </a>
               <button className="navbar-toggler" type="button" datatoggle="collapse" data-target="#navbarSupportedContent" ariacontrols="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
